@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="890dp"
+    android:background="@drawable/metal_background"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ClientActivity_">
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="445dp"
+        android:layout_height="445dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:numColumns="16"
+        android:visibility="visible"
+        tools:listitem="@layout/field_item"></GridView>
+
+    <RelativeLayout
+        android:id="@+id/LinearLayoutControl"
+        android:layout_width="896dp"
+        android:layout_height="427dp"
+        android:layout_below="@+id/gridView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-449dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="bottom">
+
+        <RelativeLayout
+            android:id="@+id/HealthBarLayout"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="218dp"
+            android:background="@drawable/health_bar_background"
+            android:gravity="bottom">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="260dp"
+                android:layout_height="29dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/health" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/HealthBarLayout2"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/HealthBarLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="218dp"
+            android:background="@drawable/health_bar2_background">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="260dp"
+                android:layout_height="29dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="0dp"
+                android:src="@drawable/health" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/vehicleControls"
+            android:layout_width="206dp"
+            android:layout_height="206dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/buttonBack"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/backward" />
+
+            <Button
+                android:id="@+id/vehicleSelect"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ship_selected" />
+
+            <Button
+                android:id="@+id/buttonForward"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/forward" />
+
+            <Button
+                android:id="@+id/buttonLeft"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/left"
+                android:paddingEnd="10dp" />
+
+            <Button
+                android:id="@+id/buttonRight"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/right" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/directionalFire"
+            android:layout_width="206dp"
+            android:layout_height="206dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="625dp"
+            android:layout_marginBottom="215dp">
+
+            <Button
+                android:id="@+id/backFire"
+                android:layout_width="65dp"
+                android:layout_height="78dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="71dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/click_fire_back" />
+
+            <Button
+                android:id="@+id/forwardFire"
+                android:layout_width="65dp"
+                android:layout_height="128dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="70dp"
+                android:background="@drawable/click_fire_forward" />
+
+            <Button
+                android:id="@+id/leftFire"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="43dp"
+                android:background="@drawable/click_fire_left" />
+
+            <Button
+                android:id="@+id/rightFire"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/leftFire"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/click_fire_right" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/buttonLeave"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="190dp"
+            android:text="Leave" />
+
+        <Button
+            android:id="@+id/buttonEject"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/buttonEjectSoldier"
+            android:layout_marginEnd="170dp"
+            android:text="Eject PowerUp" />
+
+        <Button
+            android:id="@+id/buttonEjectSoldier"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/HealthBarLayout"
+            android:layout_marginTop="15dp"
+            android:text="Eject Soldier" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/powerUp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="333dp"
+        android:layout_toEndOf="@+id/gridView"
+        android:background="@drawable/remote_control_eject" />
+
+</RelativeLayout>

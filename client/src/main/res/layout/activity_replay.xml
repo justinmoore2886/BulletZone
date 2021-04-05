@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:id="@+id/replayGrid"
+        android:layout_width="445dp"
+        android:layout_height="445dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:numColumns="16"
+        android:visibility="visible"
+        tools:listitem="@layout/field_item"
+        ></GridView>
+
+    <RelativeLayout
+        android:id="@+id/nestLayout"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/leaveReplay"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="17dp"
+            android:layout_weight="1"
+            android:text="Leave"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/replayButton"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="187dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="Playback last game"
+            android:textSize="30sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="201dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="67dp"
+            android:layout_marginEnd="0dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/normalSpeed"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:text="Normal Speed"
+                android:textSize="36sp" />
+
+            <RadioButton
+                android:id="@+id/twoSpeed"
+                android:layout_width="144dp"
+                android:layout_height="91dp"
+                android:background="@android:color/holo_orange_light"
+                android:text="2x Speed"
+                android:textSize="36sp" />
+
+            <RadioButton
+                android:id="@+id/threeSpeed"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_dark"
+                android:text="3x Speed"
+                android:textSize="36sp" />
+
+            <RadioButton
+                android:id="@+id/fourSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_light"
+                android:text="4x Speed"
+                android:textSize="36sp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+</RelativeLayout>
